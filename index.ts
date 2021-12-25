@@ -18,8 +18,6 @@ const csvFile = new CsvFile({
     const [page] = await browser.pages();
     const page2 = await browser.newPage();
 
-    // create event
-
     await page.waitForTimeout(1000);
     await page.bringToFront();
 
@@ -53,6 +51,8 @@ const csvFile = new CsvFile({
 /**
  * Loop followers and get data
  * @param page - puppeteer page
+ * @param page2 - puppeteer page
+ * @param lastIndex - last index of followers list
  */
 async function getFollowersData(page: puppeteer.Page, page2: puppeteer.Page, lastIndex = 0) {
     const followers = await page.$$('div[role="dialog"] ul li');
@@ -91,6 +91,7 @@ async function getFollowersData(page: puppeteer.Page, page2: puppeteer.Page, las
 /**
  * Scroll to bottom of followers list
  * @param page - puppeteer page
+ * @param page2 - puppeteer page
  */
 async function scrollToBottom(page: puppeteer.Page, page2: puppeteer.Page, lastIndex = 0) {
     console.log('scrollToBottom...');

@@ -92,6 +92,7 @@ async function getFollowersData(page: puppeteer.Page, page2: puppeteer.Page, las
  * Scroll to bottom of followers list
  * @param page - puppeteer page
  * @param page2 - puppeteer page
+ * @param lastIndex - last index of followers list
  */
 async function scrollToBottom(page: puppeteer.Page, page2: puppeteer.Page, lastIndex = 0) {
     console.log('scrollToBottom...');

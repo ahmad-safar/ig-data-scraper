@@ -42,7 +42,6 @@ const csvFile = new CsvFile({
     await page.waitForSelector(lastItemFollowerSelector);
     await page.waitForTimeout(3000);
 
-    await csvFile.create([{ username: null, fullname: null, biography: null, website: null }]);
     await getFollowersData(page, page2)
 
     await browser.close();

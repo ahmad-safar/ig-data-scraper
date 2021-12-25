@@ -1,0 +1,19 @@
+{
+  "name": "ig-data-scraper",
+  "version": "1.0.0",
+  "description": "A simple Instagram data scraper with Puppeteer",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "fast-csv": "^4.3.6",
+    "puppeteer": "^13.0.1",
+    "ts-node": "^10.4.0"
+  }
+}
